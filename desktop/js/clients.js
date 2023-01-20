@@ -56,7 +56,7 @@ module.exports = (app) => {
         let udpMsg = msg;
         const oscArgs = args.map((arg) => {
             // Float
-            if (/\b\d+f\b/.test(arg)) return { type: 'f', value: parseInt(arg) / 10.0 };
+            if (/\b\d+f\b/.test(arg)) return { type: 'f', value: parseInt(arg) / 1000.0 };
             // Integer
             else if (/\b\d+\b/.test(arg)) return parseInt(arg);
             // Single char converted to Base 36 Integer
