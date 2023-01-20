@@ -66,12 +66,6 @@ module.exports = (app) => {
             return focusContentEditable(el, start, end);
         }
         
-        // Check if host already exists
-        if (app.config.hosts.some((h, i) => h.ip === ip && h.port === port && i !== index)) {
-            displayTooltip(el, 'Already exists');
-            return focusContentEditable(el, inputString.length, inputString.length);
-        }
-
         // make sure hostString is well formated
         el.innerText = hostString;
 
