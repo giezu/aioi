@@ -242,7 +242,7 @@ module.exports = (app) => {
             const lastHost = app.config.hosts[app.config.hosts.length - 1];
             newHost = {
                 ip: lastHost.ip,
-                port: lastHost.port + 1,
+                port: lastHost.port,
                 type: lastHost.type,
                 oscString: '',
                 udpString: ''
